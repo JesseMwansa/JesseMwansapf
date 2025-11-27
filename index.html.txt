@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jesse Mwansa — Portfolio</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+            background: #000;
+            color: #fff;
+        }
+
+        header {
+            padding: 60px 40px;
+            text-align: center;
+            border-bottom: 1px solid #333;
+        }
+
+        h1 {
+            font-size: 42px;
+            margin: 0;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        h2 {
+            font-size: 26px;
+            margin-top: 60px;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        p {
+            line-height: 1.7;
+            color: #ccc;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .section {
+            padding: 50px 40px;
+            max-width: 1000px;
+            margin: auto;
+            border-bottom: 1px solid #222;
+        }
+
+        a {
+            color: #9cd3ff;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .button {
+            margin-top: 20px;
+            display: inline-block;
+            padding: 12px 20px;
+            border: 1px solid #fff;
+            border-radius: 8px;
+            color: #fff;
+            text-transform: uppercase;
+            font-size: 14px;
+            letter-spacing: 1px;
+            transition: 0.3s;
+        }
+
+        .button:hover {
+            background: #fff;
+            color: #000;
+        }
+
+        .img-frame {
+            background: #111;
+            padding: 20px;
+            border: 1px solid #333;
+            border-radius: 8px;
+            margin: 25px 0;
+        }
+
+        footer {
+            padding: 40px;
+            text-align: center;
+            color: #777;
+            font-size: 14px;
+            border-top: 1px solid #222;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Jesse Mwansa</h1>
+        <p>Data Science • Business Intelligence • Dashboard Design</p>
+    </header>
+
+    <div class="section">
+        <h2>About Me</h2>
+        <p>I’m a Data Science & Business Intelligence graduate specialising in transforming unstructured data into modern, aesthetic, and decision-ready insights. I merge analytical thinking with design — creating dashboards, vibe-based clustering models, and data stories for fashion, retail, and commercial use cases.</p>
+    </div>
+
+    <div class="section">
+        <h2>Portfolio</h2>
+        <p>Click below to view my full case study and dashboard analysis hosted on Notion.</p>
+        <a href="#" class="button">View My Portfolio</a>
+        <!-- Replace # with your Notion portfolio link -->
+    </div>
+
+    <div class="section">
+        <h2>SSENSE Vibe Intelligence Dashboard</h2>
+        <p>A full end-to-end fashion analytics project using Python, NLP, clustering (K-Means), PCA, and Power BI. Includes aesthetic clustering, vibe mapping, brand positioning, and transition modelling.</p>
+
+        <div class="img-frame">
+            <p style="text-align:center; color:#777;">Dashboard Preview (replace with your image)</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>CV / Resume</h2>
+        <p>You can download my up-to-date CV here:</p>
+        <a href="#" class="button">Download My CV</a>
+        <!-- Replace # with your CV link (PDF uploaded anywhere) -->
+    </div>
+
+    <div class="section">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:jessemwansa@example.com">jessemwansa@example.com</a></p>
+        <p>LinkedIn: <a href="#">My LinkedIn</a></p>
+        <!-- Replace # with your actual LinkedIn -->
+    </div>
+
+    <footer>
+        © 2025 Jesse Mwansa — All Rights Reserved
+    </footer>
+
+</body>
+</html>
