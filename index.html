@@ -1,142 +1,480 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Jesse Mwansa — Portfolio</title>
+  <meta charset="UTF-8" />
+  <title>Jesse Mwansa — Data Science &amp; Business Intelligence</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Portfolio of Jesse Mwansa, Data Science & Business Intelligence. Fashion analytics, vibe clustering, dashboards, and brand insights." />
 
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Inter', sans-serif;
-            background: #000;
-            color: #fff;
-        }
+  <!-- Luxury fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-        header {
-            padding: 60px 40px;
-            text-align: center;
-            border-bottom: 1px solid #333;
-        }
+  <style>
+    :root {
+      --bg: #050505;
+      --bg-elevated: #0c0c0c;
+      --border-subtle: #222;
+      --text-main: #f7f7f7;
+      --text-muted: #a6a6a6;
+      --accent: #d4af37;      /* soft gold */
+      --accent-soft: rgba(212, 175, 55, 0.08);
+      --shadow-soft: 0 24px 60px rgba(0,0,0,0.85);
+      --radius-lg: 18px;
+      --radius-pill: 999px;
+      --max-width: 980px;
+    }
 
-        h1 {
-            font-size: 42px;
-            margin: 0;
-            font-weight: 700;
-            letter-spacing: 1px;
-        }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-        h2 {
-            font-size: 26px;
-            margin-top: 60px;
-            margin-bottom: 20px;
-            font-weight: 600;
-        }
+    body {
+      background: radial-gradient(circle at top, #151515 0, #050505 40%, #020202 100%);
+      color: var(--text-main);
+      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
 
-        p {
-            line-height: 1.7;
-            color: #ccc;
-            max-width: 800px;
-            margin: auto;
-        }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
 
-        .section {
-            padding: 50px 40px;
-            max-width: 1000px;
-            margin: auto;
-            border-bottom: 1px solid #222;
-        }
+    main {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 40px 18px 72px;
+    }
 
-        a {
-            color: #9cd3ff;
-            text-decoration: none;
-        }
+    /* Top bar */
+    .top-nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 48px;
+    }
 
-        a:hover {
-            text-decoration: underline;
-        }
+    .brand-mark {
+      font-family: "Playfair Display", serif;
+      font-weight: 600;
+      font-size: 1rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
 
-        .button {
-            margin-top: 20px;
-            display: inline-block;
-            padding: 12px 20px;
-            border: 1px solid #fff;
-            border-radius: 8px;
-            color: #fff;
-            text-transform: uppercase;
-            font-size: 14px;
-            letter-spacing: 1px;
-            transition: 0.3s;
-        }
+    .brand-mark span {
+      color: var(--accent);
+    }
 
-        .button:hover {
-            background: #fff;
-            color: #000;
-        }
+    .nav-links {
+      display: flex;
+      gap: 18px;
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: var(--text-muted);
+    }
 
-        .img-frame {
-            background: #111;
-            padding: 20px;
-            border: 1px solid #333;
-            border-radius: 8px;
-            margin: 25px 0;
-        }
+    .nav-links a {
+      position: relative;
+      padding-bottom: 3px;
+    }
 
-        footer {
-            padding: 40px;
-            text-align: center;
-            color: #777;
-            font-size: 14px;
-            border-top: 1px solid #222;
-        }
-    </style>
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0;
+      height: 1px;
+      background: var(--accent);
+      transition: width 0.25s ease;
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    /* Hero */
+    .hero {
+      padding: 32px 24px 36px;
+      border-radius: var(--radius-lg);
+      background: linear-gradient(135deg, rgba(255,255,255,0.02), rgba(0,0,0,0.75));
+      border: 1px solid rgba(255,255,255,0.04);
+      box-shadow: var(--shadow-soft);
+      margin-bottom: 40px;
+    }
+
+    .hero-kicker {
+      font-size: 0.8rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 18px;
+    }
+
+    .hero h1 {
+      font-family: "Playfair Display", serif;
+      font-weight: 600;
+      font-size: clamp(2.3rem, 3vw, 2.8rem);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .hero-subtitle {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      max-width: 540px;
+      margin-bottom: 26px;
+    }
+
+    .hero-meta {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.22em;
+      color: #dcdcdc;
+      margin-bottom: 24px;
+    }
+
+    .hero-meta span {
+      color: var(--accent);
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 22px;
+      border-radius: var(--radius-pill);
+      border: 1px solid transparent;
+      font-size: 0.86rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: all 0.22s ease;
+      text-align: center;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: #111;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.7);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 16px 40px rgba(0,0,0,0.8);
+      background: #e0c35a;
+    }
+
+    .btn-ghost {
+      border-color: rgba(255,255,255,0.14);
+      color: var(--text-main);
+      background: rgba(255,255,255,0.02);
+    }
+
+    .btn-ghost:hover {
+      background: rgba(255,255,255,0.05);
+      border-color: rgba(255,255,255,0.3);
+    }
+
+    /* Sections */
+    section {
+      margin-bottom: 40px;
+      padding: 26px 24px 28px;
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border-subtle);
+      background: radial-gradient(circle at top left, rgba(255,255,255,0.04), transparent 50%);
+      background-color: var(--bg-elevated);
+    }
+
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 18px;
+      gap: 12px;
+    }
+
+    .section-title {
+      font-family: "Playfair Display", serif;
+      font-size: 1.1rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    .section-tag {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: var(--text-muted);
+    }
+
+    .section-body {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+    }
+
+    .section-body p + p {
+      margin-top: 10px;
+    }
+
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 10px;
+      margin-bottom: 6px;
+    }
+
+    .pill {
+      padding: 4px 10px;
+      border-radius: var(--radius-pill);
+      border: 1px solid rgba(255,255,255,0.12);
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: var(--text-muted);
+      background: rgba(255,255,255,0.02);
+    }
+
+    /* Project card */
+    .project-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.1fr);
+      gap: 26px;
+      align-items: flex-start;
+    }
+
+    .project-meta h3 {
+      font-family: "Playfair Display", serif;
+      font-size: 1.15rem;
+      margin-bottom: 8px;
+    }
+
+    .project-meta p {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      margin-bottom: 10px;
+    }
+
+    .project-list {
+      font-size: 0.9rem;
+      margin-left: 18px;
+      margin-bottom: 14px;
+      color: var(--text-muted);
+    }
+
+    .project-list li + li {
+      margin-top: 4px;
+    }
+
+    .project-preview {
+      background: #000;
+      border-radius: 14px;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.1);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .project-preview img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    .project-preview-caption {
+      padding: 10px 14px 12px;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      border-top: 1px solid rgba(255,255,255,0.08);
+      background: linear-gradient(to right, rgba(255,255,255,0.03), transparent);
+    }
+
+    footer {
+      margin-top: 26px;
+      padding: 22px 4px 0;
+      border-top: 1px solid var(--border-subtle);
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    footer a {
+      color: var(--accent);
+    }
+
+    @media (max-width: 780px) {
+      main {
+        padding-top: 26px;
+      }
+
+      .top-nav {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+      }
+
+      .nav-links {
+        gap: 14px;
+      }
+
+      .hero {
+        padding: 24px 18px 26px;
+      }
+
+      section {
+        padding: 22px 18px 24px;
+      }
+
+      .project-layout {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+  </style>
 </head>
 
 <body>
-
-    <header>
-        <h1>Jesse Mwansa</h1>
-        <p>Data Science • Business Intelligence • Dashboard Design</p>
+  <main>
+    <!-- Top bar -->
+    <header class="top-nav">
+      <div class="brand-mark">
+        JESSE <span>MWANSA</span>
+      </div>
+      <nav class="nav-links">
+        <a href="#about">About</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#ssense">SSENSE Project</a>
+      </nav>
     </header>
 
-    <div class="section">
-        <h2>About Me</h2>
-        <p>I’m a Data Science & Business Intelligence graduate specialising in transforming unstructured data into modern, aesthetic, and decision-ready insights. I merge analytical thinking with design — creating dashboards, vibe-based clustering models, and data stories for fashion, retail, and commercial use cases.</p>
-    </div>
+    <!-- Hero -->
+    <section class="hero" id="about">
+      <div class="hero-kicker">Data Science &amp; Business Intelligence</div>
+      <h1>Jesse Mwansa</h1>
+      <div class="hero-meta">
+        <span>Fashion analytics</span> &nbsp;•&nbsp; Vibe clustering &amp; dashboards
+      </div>
+      <p class="hero-subtitle">
+        I’m a data science &amp; business intelligence graduate focused on turning unstructured product
+        descriptions and price data into clean, decision-ready insights for fashion and retail.
+      </p>
 
-    <div class="section">
-        <h2>Portfolio</h2>
-        <p>Click below to view my full case study and dashboard analysis hosted on Notion.</p>
-        <a href="#" class="button">View My Portfolio</a>
-        <!-- Replace # with your Notion portfolio link -->
-    </div>
+      <div class="hero-actions">
+        <!-- Notion portfolio link -->
+        <a class="btn btn-primary" href="https://www.notion.so/SSENSE-Vibe-Intelligence-Dashboard-Case-Study-2afe5363213e80f28983f40ce30b0a4d?source=copy_link" target="_blank" rel="noopener">
+          View Case Study
+        </a>
 
-    <div class="section">
-        <h2>SSENSE Vibe Intelligence Dashboard</h2>
-        <p>A full end-to-end fashion analytics project using Python, NLP, clustering (K-Means), PCA, and Power BI. Includes aesthetic clustering, vibe mapping, brand positioning, and transition modelling.</p>
+        <!-- You can point this to your CV PDF on GitHub later -->
+        <!-- <a class="btn btn-ghost" href="JesseMwansaCV.pdf" target="_blank" rel="noopener">Download CV</a> -->
+      </div>
+    </section>
 
-        <div class="img-frame">
-            <p style="text-align:center; color:#777;">Dashboard Preview (replace with your image)</p>
+    <!-- Portfolio section -->
+    <section id="portfolio">
+      <div class="section-header">
+        <div class="section-title">Portfolio</div>
+        <div class="section-tag">Notion • Case Studies • Dashboards</div>
+      </div>
+      <div class="section-body">
+        <p>
+          My portfolio is hosted in Notion and walks through the full SSENSE Vibe Intelligence case
+          study – from scraping and NLP feature engineering through to vibe clustering, brand
+          positioning, and dashboard design.
+        </p>
+
+        <div class="pill-row">
+          <div class="pill">Python &amp; NLP</div>
+          <div class="pill">K-Means Clustering</div>
+          <div class="pill">Power BI</div>
+          <div class="pill">Fashion &amp; Luxury</div>
         </div>
-    </div>
 
-    <div class="section">
-        <h2>CV / Resume</h2>
-        <p>You can download my up-to-date CV here:</p>
-        <a href="#" class="button">Download My CV</a>
-        <!-- Replace # with your CV link (PDF uploaded anywhere) -->
-    </div>
+        <a class="btn btn-ghost" href="https://www.notion.so/SSENSE-Vibe-Intelligence-Dashboard-Case-Study-2afe5363213e80f28983f40ce30b0a4d?source=copy_link" target="_blank" rel="noopener">
+          Open Notion Portfolio
+        </a>
+      </div>
+    </section>
 
-    <div class="section">
-        <h2>Contact</h2>
-        <p>Email: <a href="mailto:jessemwansa@example.com">jessemwansa@example.com</a></p>
-        <p>LinkedIn: <a href="#">My LinkedIn</a></p>
-        <!-- Replace # with your actual LinkedIn -->
-    </div>
+    <!-- SSENSE project highlight -->
+    <section id="ssense">
+      <div class="section-header">
+        <div class="section-title">SSENSE Vibe Intelligence Dashboard</div>
+        <div class="section-tag">End-to-end Fashion Analytics Project</div>
+      </div>
+
+      <div class="project-layout">
+        <div class="project-meta">
+          <h3>Vibe clustering, pricing insights &amp; brand positioning</h3>
+          <p>
+            A full analytics pipeline on SSENSE product listings: cleaning ~9k products, embedding
+            product descriptions, discovering 8 aesthetic “Vibes”, and building a Power BI dashboard to
+            tell the story.
+          </p>
+
+          <ul class="project-list">
+            <li>Used sentence-transformer embeddings and K-Means to discover 8 fashion vibes</li>
+            <li>Mapped brands into a vibe space and analysed price vs vibe behaviour</li>
+            <li>Designed a luxury-styled Power BI dashboard for non-technical stakeholders</li>
+          </ul>
+
+          <div class="pill-row">
+            <div class="pill">Sentence Transformers</div>
+            <div class="pill">K-Means (k = 8)</div>
+            <div class="pill">PCA / Vibe Map</div>
+            <div class="pill">Transition Modelling</div>
+          </div>
+
+          <div style="display:flex; flex-wrap:wrap; gap:10px; margin-top:14px;">
+            <!-- Link to the PDF version of your dashboard -->
+            <a class="btn btn-primary" href="SSENSEBI.pdf" target="_blank" rel="noopener">
+              View Dashboard PDF
+            </a>
+
+            <!-- Optional: link directly to the Notion case study again -->
+            <a class="btn btn-ghost" href="https://www.notion.so/SSENSE-Vibe-Intelligence-Dashboard-Case-Study-2afe5363213e80f28983f40ce30b0a4d?source=copy_link" target="_blank" rel="noopener">
+              Read Full Methodology
+            </a>
+          </div>
+        </div>
+
+        <div class="project-preview">
+          <!-- Replace "BI_ss.png" with the actual filename of your dashboard screenshot in the repo -->
+          <img src="BI_ss.png" alt="SSENSE Vibe Intelligence Power BI dashboard preview" />
+          <div class="project-preview-caption">
+            Power BI view of vibe share, brand dominance per cluster, and price vs vibe scatter for the SSENSE catalogue.
+          </div>
+        </div>
+      </div>
+    </section>
 
     <footer>
-        © 2025 Jesse Mwansa — All Rights Reserved
+      <div>© <span id="year"></span> Jesse Mwansa. All rights reserved.</div>
+      <div>
+        Open to roles in Data Science &amp; Business Intelligence — fashion, retail, and customer analytics.
+      </div>
     </footer>
+  </main>
 
+  <script>
+    // Simple year updater
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
